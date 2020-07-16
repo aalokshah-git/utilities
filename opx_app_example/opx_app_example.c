@@ -179,7 +179,7 @@ bool cps_get_queues_per_port(char **string)
 
 int main()
 {
-	bool ret;
+	bool ret = true;
 	int i;
 
 	printf("=================================================TEMPERATURE=================================================\n");
@@ -205,6 +205,7 @@ int main()
 			printf("Failed to fetch queues allocated to port for tap-interface %s\n", interface[i]);
 		}
 	}
-	return 0;
+
+	return ret;
 }
 
